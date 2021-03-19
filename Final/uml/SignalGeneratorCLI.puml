@@ -1,0 +1,109 @@
+@startuml
+header
+Author: Matt Roby
+Version: 1.0
+endheader
+
+hide empty members
+
+title Signal Generator CLI
+
+class SignalGenCLI {
+  -void parseCLI()
+  +int main()
+}
+
+class SignalGenCycleController {
+  -shared_ptr<ICycleDAO> m_cycleDAO
+  -unique_ptr<CycleFactory> m_cycleFactory
+  -shared_ptr<OutputStepFactory> m_outputStepFactory
+  +SignalGenCycleController()
+  +void newCycle()
+  +void newStep()
+  +void runCycle()
+}
+
+interface ICycleDAO {
+  +virtual void createNewCycle(string id) = 0
+  +virtual void createNewStep(string parent, OutputStepData step) = 0
+  +virtual vector<OutputStepData> getCycleSteps(string id) = 0
+}
+
+class JSONCycleDAO {
+  -constexpr static string JSON_DATABASE_FILE_NAME
+  +void createNewCycle(string id)
+  +void createNewStep(string parent, OutputStepData step)
+  +vector<OutputStepData> getCycleSteps(string id)
+}
+
+class CycleFactory {
+  -shared_ptr<ICycleDAO> m_cycleDAO
+  -shared_ptr<OutputStepFactory> m_outputStepFactory
+  +CycleFactory(shared_ptr<ICycleDAO> cycleDAO, shared_ptr<OutputStepFactory> outputStepFactory)
+  +Cycle buildCycle(string id)
+}
+
+class OutputStepFactory {
+  +OutputStep createOutputStep(OutputStepData step)
+  +bool isStepDataValid(OutputStepData step)
+}
+
+class OutputStepData <<struct>> {
+  +string type
+  +string cond
+  +string thresh
+}
+
+class Cycle {
+  -vector<OutputStep> m_steps
+  +Cycle()
+  +void run()
+  +void addStep(OutputStep)
+}
+
+class OutputStep {
+  -unique_ptr<IOutputType> m_outputType
+  -unique_ptr<IOutputCondition> m_outputCondition
+  -shared_ptr<Notifier> m_notifier
+  +OutputStep(unique_ptr<IOutputType> outputType, unique_ptr<IOutputCondition> outputCondition, shared_ptr<Notifier> notifier)
+  +void run()
+}
+
+interface IOutputType {
+  +virtual void startOutput() = 0
+}
+
+interface IOutputBreakCondition {
+   -shared_ptr<Notifier> m_notifier
+   +virtual void startBreakCondition() = 0
+}
+
+class Notifier{
+  +void wait()
+  +void notify()
+}
+
+SignalGenCLI ..> SignalGenCycleController
+SignalGenCLI .right.> AnotherController
+SignalGenCycleController ..> CycleFactory
+SignalGenCycleController ..> Cycle
+SignalGenCycleController ..> ICycleDAO
+CycleFactory *-right- ICycleDAO
+ICycleDAO <|-- JSONCycleDAO
+CycleFactory -left-> Cycle : constructs
+CycleFactory ..> OutputStepFactory
+JSONCycleDAO -- OutputStepData
+OutputStepFactory -left-> OutputStep : constructs
+OutputStepFactory -- OutputStepData
+
+Cycle o-- OutputStep
+OutputStep *-- IOutputType
+OutputStep *-- IOutputBreakCondition
+OutputStep *-- Notifier
+Notifier -left-* IOutputBreakCondition
+IOutputType <|-- SquareOutput
+IOutputType <|-- SineOutput
+IOutputBreakCondition <|-- TimeBreakCondition
+IOutputBreakCondition <|-- TempBreakCondition
+IOutputBreakCondition <|-- MaxTempBreakCondition
+@enduml

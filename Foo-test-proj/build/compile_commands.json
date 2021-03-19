@@ -1,0 +1,22 @@
+[
+{
+  "directory": "C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/build",
+  "command": "C:\\PROGRA~2\\mingw-w64\\i686-7.2.0-win32-dwarf-rt_v5-rev1\\mingw32\\bin\\g++.exe  @CMakeFiles/foo.dir/includes_CXX.rsp -g -std=c++1z -o CMakeFiles\\foo.dir\\source\\main.cpp.obj -c C:\\Users\\matt.roby\\scratch-workspace\\oo_training\\Foo-test-proj\\source\\main.cpp",
+  "file": "C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/main.cpp"
+},
+{
+  "directory": "C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/build",
+  "command": "C:\\PROGRA~2\\mingw-w64\\i686-7.2.0-win32-dwarf-rt_v5-rev1\\mingw32\\bin\\g++.exe  @CMakeFiles/foo.dir/includes_CXX.rsp -g -std=c++1z -o CMakeFiles\\foo.dir\\source\\a.cpp.obj -c C:\\Users\\matt.roby\\scratch-workspace\\oo_training\\Foo-test-proj\\source\\a.cpp",
+  "file": "C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/a.cpp"
+},
+{
+  "directory": "C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/build",
+  "command": "C:\\PROGRA~2\\mingw-w64\\i686-7.2.0-win32-dwarf-rt_v5-rev1\\mingw32\\bin\\gcc.exe  @CMakeFiles/foo.dir/includes_C.rsp -g -std=c11 -o CMakeFiles\\foo.dir\\source\\c.c.obj -c C:\\Users\\matt.roby\\scratch-workspace\\oo_training\\Foo-test-proj\\source\\c.c",
+  "file": "C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/c.c"
+},
+{
+  "directory": "C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/build",
+  "command": "C:\\PROGRA~2\\mingw-w64\\i686-7.2.0-win32-dwarf-rt_v5-rev1\\mingw32\\bin\\g++.exe  @CMakeFiles/foo.dir/includes_CXX.rsp -g -std=c++1z -o CMakeFiles\\foo.dir\\source\\b\\b.cpp.obj -c C:\\Users\\matt.roby\\scratch-workspace\\oo_training\\Foo-test-proj\\source\\b\\b.cpp",
+  "file": "C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/b/b.cpp"
+}
+]

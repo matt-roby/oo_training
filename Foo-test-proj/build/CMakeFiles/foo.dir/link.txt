@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\foo.dir/objects.a
+C:\PROGRA~2\mingw-w64\i686-7.2.0-win32-dwarf-rt_v5-rev1\mingw32\bin\ar.exe cr CMakeFiles\foo.dir/objects.a @CMakeFiles\foo.dir\objects1.rsp
+C:\PROGRA~2\mingw-w64\i686-7.2.0-win32-dwarf-rt_v5-rev1\mingw32\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\foo.dir/objects.a -Wl,--no-whole-archive -o foo.exe -Wl,--out-implib,libfoo.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\foo.dir\linklibs.rsp

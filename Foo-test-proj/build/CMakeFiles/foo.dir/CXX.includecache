@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../source/b/b.h
+
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/a.cpp
+a.h
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/a.h
+iostream
+-
+optional
+-
+string
+-
+
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/a.h
+
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/b/b.cpp
+b.h
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/b/b.h
+iostream
+-
+
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/b/b.h
+
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/c.h
+
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/main.cpp
+a.h
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/a.h
+b.h
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/b.h
+c.h
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/source/c.h
+

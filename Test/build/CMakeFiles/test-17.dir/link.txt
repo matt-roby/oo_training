@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\test-17.dir/objects.a
+C:\PROGRA~2\mingw-w64\i686-7.2.0-win32-dwarf-rt_v5-rev1\mingw32\bin\ar.exe cr CMakeFiles\test-17.dir/objects.a @CMakeFiles\test-17.dir\objects1.rsp
+C:\PROGRA~2\mingw-w64\i686-7.2.0-win32-dwarf-rt_v5-rev1\mingw32\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\test-17.dir/objects.a -Wl,--no-whole-archive -o test-17.exe -Wl,--out-implib,libtest-17.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\test-17.dir\linklibs.rsp

@@ -1,0 +1,7 @@
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/build/CMakeFiles/foo.dir
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/build/CMakeFiles/edit_cache.dir
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/build/CMakeFiles/rebuild_cache.dir
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/build/source/CMakeFiles/edit_cache.dir
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/build/source/CMakeFiles/rebuild_cache.dir
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/build/source/b/CMakeFiles/edit_cache.dir
+C:/Users/matt.roby/scratch-workspace/oo_training/Foo-test-proj/build/source/b/CMakeFiles/rebuild_cache.dir
